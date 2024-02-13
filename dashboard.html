@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div class="left-nav grid-item">
+      <figure class="figure">
+        <img src="logo.png" class="figure-img img-fluid rounded">
+      </figure>
+      <button type="button" class="btn nav-btns">Overview</button>
+      <button type="button" class="btn nav-btns">My Leave</button>
+      <button type="button" class="btn nav-btns">My Attendance</button>
+      <button type="button" class="btn nav-btns">OKR</button>
+      <button type="button" class="btn nav-btns">HelpDesk</button>
+      <button type="button" class="btn nav-btns">Performance</button>
+      <button type="button" class="btn nav-btns">My Assets</button>
+      <button type="button" class="btn nav-btns">Intranet</button>
+      <button type="button" class="btn nav-btns">Recruitment</button>
+      <button type="button" class="btn nav-btns">External Recruiter</button>
+      <button type="button" class="btn nav-btns">Expense Management</button>
+      <button type="button" class="btn nav-btns">L&D</button>
+    </div>
+
+
+    <div>
+      <h2 class="headings">Overview</h2>
+
+
+      <div class="outer-container">
+        <div class="time-container">
+          <h4>Time & Attendance</h4>
+          <div class="inner-time-container">
+            <div>
+              <h1 class="clock-time">00:00:00</h1>
+              <p> 05-Feb-2024</p>
+            </div>
+            <div class="break-outer">
+              <div class="break-box1">
+                <p>00:00:00</p>
+                <p>Clock In Time</p>
+              </div>
+              <div class="break-box2">
+                <p>00:00:00</p>
+                <p>Break Duration</p>
+              </div>
+              <!-- <div class="break-box2">00:00:00</div> -->
+            </div>
+          </div>
+          <div class="clock-in">
+            <button type="button" class="btn btn-primary">Clock In</button>
+          </div>
+          <hr>
+          <div class="period-div">
+            <div class="btn-group">
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Period: <span id="period" style="font-weight: 700;">Last 7 days</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button onclick="changePeriod('Last 7 Days')" class="dropdown-item" type="button">Last 7
+                    days</button></li>
+                <li><button onclick="changePeriod('Last 15 Days')" class="dropdown-item" type="button">Last 15
+                    days</button></li>
+                <li><button onclick="changePeriod('Last 30 Days')" class="dropdown-item" type="button">Last 30
+                    days</button></li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <!-- avg dashbaord slider -->
+          <div class="dash-avg-list">
+
+
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">09:30</div>
+                  <div style="font-weight: 500;">Average Clock-In Time </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">19:22</div>
+                  <div style="font-weight: 500;">Average Clock-Out Time </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">00:30</div>
+                  <div style="font-weight: 500;">Average Working Hours </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">00:00</div>
+                  <div style="font-weight: 500;">Average Break Duration </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">09:30</div>
+                  <div style="font-weight: 500;">Average Clock-In Time </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">19:22</div>
+                  <div style="font-weight: 500;">Average Clock-Out Time </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">00:30</div>
+                  <div style="font-weight: 500;">Average Working Hours </div>
+                </div>
+                <div class="swiper-slide dash-avg">
+                  <div style="font-size: 1.5em; color:#007ee5;font-weight: 900;">00:00</div>
+                  <div style="font-weight: 500;">Average Break Duration </div>
+                </div>
+
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="graph-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <section class="performance-outer">
+        <div class="performance-top">
+          <h3 style="font-size: 1.25rem; font-weight: 900;">Performance Management</h3>
+          <div class="input-group mb-3 mt-3 performance-search">
+            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control rounded-end" placeholder="Search by name" aria-label="Search by user"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="performance-bottom">
+          <table class="table table-borderless">
+            <thead>
+              <tr class="table-secondary">
+                <th style="width:55%" scope="col">Cycle</th>
+                <th scope="col">Status</th>
+                <th scope="col">Given</th>
+                <th scope="col">Recieved</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="pb-3">
+                <td>Annual Performance Review 2022 - 23</td>
+                <td style="color: rgb(112, 164, 61) !important;">Completed</td>
+                <td>00</td>
+                <td>00/ 01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+
+
+    <!-- javascript here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+
+    <!-- javascript ends -->
+  </body>
+
+</html>
